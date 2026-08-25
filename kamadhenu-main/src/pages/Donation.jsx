@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import imgAnnadhanam from '../assets/images/annadhanam.png';
-import imgGoSeva from '../assets/images/real_kamadhenu_cow.png';
+import imgGoSeva from '../assets/images/9.jpg';
 import imgTempleDev from '../assets/images/temple_dev.png';
 import imgPooja from '../assets/images/pooja_donate.png';
 import imgGeneral from '../assets/images/general_donate.png';
