@@ -14,14 +14,7 @@ const PoojaServices = () => {
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           
           {/* Tabs Navigation */}
-          <div style={{ 
-            display: 'flex', 
-            justifyContent: 'center', 
-            gap: '3rem', 
-            borderBottom: '1px solid rgba(200, 155, 60, 0.3)',
-            marginBottom: '2rem',
-            flexWrap: 'wrap'
-          }}>
+          <div className="tabs-nav">
             <button 
                onClick={() => setActiveTab('about')}
                style={{ 

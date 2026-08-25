@@ -12,7 +12,7 @@ const Contact = () => {
             <h1 className="section-title">Contact Us</h1>
           </div>
           
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem' }}>
+          <div className="contact-grid">
             <div className="contact-details" style={{ backgroundColor: 'var(--color-surface)', padding: '3rem', borderRadius: '16px', boxShadow: 'var(--shadow-sm)' }}>
               <h3 style={{ fontSize: '1.5rem', marginBottom: '2rem', color: 'var(--color-secondary)' }}>Temple Information</h3>
               
