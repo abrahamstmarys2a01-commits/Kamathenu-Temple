@@ -1490,6 +1490,13 @@
   gap: 4rem;
 }
 
+.contact-card {
+  background-color: var(--color-surface);
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
 /* Responsive Queries */
 /* Mobile Menu Styles */
 .nav-menu-wrapper {
@@ -1723,6 +1730,10 @@
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+  
+  .contact-card {
+    padding: 1.5rem;
   }
 
   .tabs-nav {

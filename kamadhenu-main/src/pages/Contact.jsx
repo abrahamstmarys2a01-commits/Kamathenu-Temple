@@ -13,7 +13,7 @@ const Contact = () => {
           </div>
           
           <div className="contact-grid">
-            <div className="contact-details" style={{ backgroundColor: 'var(--color-surface)', padding: '3rem', borderRadius: '16px', boxShadow: 'var(--shadow-sm)' }}>
+            <div className="contact-details contact-card">
               <h3 style={{ fontSize: '1.5rem', marginBottom: '2rem', color: 'var(--color-secondary)' }}>Temple Information</h3>
               
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
@@ -45,7 +45,7 @@ const Contact = () => {
               </div>
             </div>
             
-            <div className="contact-form-wrapper" style={{ backgroundColor: 'var(--color-surface)', padding: '3rem', borderRadius: '16px', boxShadow: 'var(--shadow-sm)' }}>
+            <div className="contact-form-wrapper contact-card">
               <h3 style={{ fontSize: '1.5rem', marginBottom: '2rem', color: 'var(--color-secondary)' }}>Send a Message</h3>
               <form style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }} onSubmit={(e) => e.preventDefault()}>
                 <input type="text" placeholder="Your Name" style={{ padding: '1rem', borderRadius: '8px', border: '1px solid #ddd', fontFamily: 'inherit' }} />
