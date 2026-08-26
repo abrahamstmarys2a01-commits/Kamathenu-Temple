@@ -52,7 +52,7 @@ const Donation = () => {
       <div className="container">
         
         {/* Header Section */}
-        <div className="text-center animate-fade-up" style={{ marginBottom: '4rem' }}>
+        <div className="text-center animate-fade-up" style={{ marginBottom: '2rem' }}>
           <h1 className="section-title" style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>
             {language === 'ta' ? 'நன்கொடை மற்றும் சேவை' : 'Donation and Service'}
           </h1>

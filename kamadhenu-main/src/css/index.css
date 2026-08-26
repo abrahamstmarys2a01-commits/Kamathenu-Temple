@@ -89,7 +89,7 @@ img {
 }
 
 .section {
-  padding: 5rem 0;
+  padding: 2.5rem 0;
 }
 
 .text-center {
@@ -149,15 +149,15 @@ img {
 }
 
 .animate-fade-up {
-  animation: fadeUp 0.8s var(--transition-smooth) forwards;
+  animation: fadeUp 0.8s var(--transition-smooth) both;
 }
 
 .animate-slide-left {
-  animation: slideLeft 0.8s var(--transition-smooth) forwards;
+  animation: slideLeft 0.8s var(--transition-smooth) both;
 }
 
 .animate-slide-right {
-  animation: slideRight 0.8s var(--transition-smooth) forwards;
+  animation: slideRight 0.8s var(--transition-smooth) both;
 }
 
 .animate-float {
@@ -171,5 +171,59 @@ img {
   }
   .section {
     padding: 3rem 0;
+  }
+}
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-from-left {
+  animation: slideFromLeft 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-slide-from-right {
+  animation: slideFromRight 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (max-width: 768px) {
+  @keyframes slideFromLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideFromRight {
+    from {
+      opacity: 0;
+      transform: translateX(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 }

@@ -3,13 +3,20 @@ import { Link } from 'react-router-dom';
 import { Menu, X, Globe } from 'lucide-react';
 import Button from './Button';
 import { useLanguage } from '../context/LanguageContext';
+import { useBooking } from '../context/BookingContext';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { language, toggleLanguage } = useLanguage();
+  const { openBooking } = useBooking();
 
   const toggleMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleBookClick = () => {
+    setIsMobileMenuOpen(false);
+    openBooking();
   };
 
   return (
@@ -25,9 +32,9 @@ const Navbar = () => {
         <div className={`nav-menu-wrapper ${isMobileMenuOpen ? 'open' : ''}`}>
           <ul className="nav-links">
             <li><Link to="/" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>{language === 'ta' ? 'முகப்பு' : 'Home'}</Link></li>
-            <li><Link to="/pooja-services" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>{language === 'ta' ? 'பூஜைகள்' : 'Pooja Services'}</Link></li>
-            <li><Link to="/donation" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>{language === 'ta' ? 'நன்கொடை' : 'Donation'}</Link></li>
-            <li><Link to="/contact" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>{language === 'ta' ? 'தொடர்பு' : 'Contact Us'}</Link></li>
+            <li><Link to="/#pooja-services" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>{language === 'ta' ? 'பூஜைகள்' : 'Pooja Services'}</Link></li>
+            <li><Link to="/#donation" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>{language === 'ta' ? 'நன்கொடை' : 'Donation'}</Link></li>
+            <li><Link to="/#contact" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>{language === 'ta' ? 'தொடர்பு' : 'Contact Us'}</Link></li>
           </ul>
           
           <div className="nav-action" style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
@@ -48,9 +55,7 @@ const Navbar = () => {
             >
               <Globe size={16} /> {language === 'ta' ? 'English' : 'தமிழ்'}
             </button>
-            <Link to="/pooja-services" onClick={() => setIsMobileMenuOpen(false)}>
-              <Button variant="primary" className="btn-book">{language === 'ta' ? 'பூஜை முன்பதிவு' : 'BOOK POOJA'}</Button>
-            </Link>
+            <Button variant="primary" className="btn-book" onClick={handleBookClick}>{language === 'ta' ? 'பூஜை முன்பதிவு' : 'BOOK POOJA'}</Button>
           </div>
         </div>
 

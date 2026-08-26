@@ -7,7 +7,7 @@ const Footer = () => {
   const { language } = useLanguage();
 
   return (
-    <footer id="contact" className="footer">
+    <footer className="footer">
       <div className="container">
         <div className="footer-grid">
           {/* Column 1 */}
@@ -30,10 +30,10 @@ const Footer = () => {
           <div className="footer-col">
             <h3 className="footer-title">{language === 'ta' ? 'விரைவு இணைப்புகள்' : 'Quick Links'}</h3>
             <div className="footer-links">
-              <a href="#" className="footer-link">{language === 'ta' ? 'முகப்பு' : 'Home'}</a>
-              <a href="#" className="footer-link">{language === 'ta' ? 'பூஜைகள்' : 'Pooja Services'}</a>
-              <a href="#" className="footer-link">{language === 'ta' ? 'நன்கொடை' : 'Donation'}</a>
-              <a href="#" className="footer-link">{language === 'ta' ? 'தொடர்பு' : 'Contact Us'}</a>
+              <a href="#home" className="footer-link">{language === 'ta' ? 'முகப்பு' : 'Home'}</a>
+              <a href="#pooja-services" className="footer-link">{language === 'ta' ? 'பூஜைகள்' : 'Pooja Services'}</a>
+              <a href="#donation" className="footer-link">{language === 'ta' ? 'நன்கொடை' : 'Donation'}</a>
+              <a href="#contact" className="footer-link">{language === 'ta' ? 'தொடர்பு' : 'Contact Us'}</a>
             </div>
           </div>
           
