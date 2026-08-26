@@ -36,9 +36,9 @@ const Services = ({ hideHeader = false }) => {
                  </div>
                  <h2 className="fc-title">
                    {language === 'ta' ? (
-                     <>சிசுபால கர்மவினை அகற்றும்<br/>வாராஹி ஹோமம்</>
+                     <>சிசுபால கர்ப்பவிருத்தி<br/>வாராஹி ஹோமம்</>
                    ) : (
-                     <>Sisubala Karmavirchi<br/>Varahi Homam</>
+                     <>Sisubala Garbhaviruthi<br/>Varahi Homam</>
                    )}
                  </h2>
                  
