@@ -1,13 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
-const ScrollReveal = ({ children, direction = 'up', delay = '0ms', style = {}, className = "" }) => {
+const ScrollReveal = ({ children, direction = 'up', delay = '0ms', style = {}, className = "", alwaysAnimate = false }) => {
   const [isVisible, setIsVisible] = useState(false);
   const domRef = useRef();
   const location = useLocation();
 
-  // ONLY animate on specific pages as per user strict requirements
-  const isAllowedPage = 
+  // ONLY animate on specific pages as per user strict requirements, UNLESS alwaysAnimate is true
+  const isAllowedPage = alwaysAnimate || 
     location.pathname.includes('/pooja-services') || 
     location.pathname.includes('/services') || 
     location.pathname.includes('/yagam-services');

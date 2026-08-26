@@ -23,19 +23,19 @@ const Services = ({ hideHeader = false, onImageClick = null }) => {
         <div className="services-grid">
            <div className="featured-card">
               {onImageClick ? (
-                <ScrollReveal direction="left" className="fc-image" style={{ display: 'block', textDecoration: 'none', cursor: 'pointer' }}>
+                <ScrollReveal alwaysAnimate={true} direction="left" className="fc-image" style={{ display: 'block', textDecoration: 'none', cursor: 'pointer' }}>
                   <div onClick={onImageClick}>
                    <img src={varahiImg} alt="Varahi Homam" style={{ transition: 'transform 0.3s ease' }} />
                   </div>
                 </ScrollReveal>
               ) : (
-                <ScrollReveal direction="left" className="fc-image" style={{ display: 'block', textDecoration: 'none' }}>
+                <ScrollReveal alwaysAnimate={true} direction="left" className="fc-image" style={{ display: 'block', textDecoration: 'none' }}>
                   <Link to="/pooja-services" style={{ display: 'block' }}>
                    <img src={varahiImg} alt="Varahi Homam" style={{ transition: 'transform 0.3s ease' }} />
                   </Link>
                 </ScrollReveal>
               )}
-              <ScrollReveal direction="right" className="fc-content">
+              <ScrollReveal alwaysAnimate={true} direction="right" className="fc-content">
                  <Link to="/pooja-services" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
                    <div className="fc-pretitle">
                       {language === 'ta' 

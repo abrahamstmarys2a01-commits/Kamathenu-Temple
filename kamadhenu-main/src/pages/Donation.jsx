@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import ScrollReveal from '../components/ScrollReveal';
 import imgAnnadhanam from '../assets/images/annadhanam.png';
 import imgGoSeva from '../assets/images/9.jpg';
 import imgTempleDev from '../assets/images/temple_dev.png';
@@ -80,9 +81,8 @@ const Donation = () => {
           margin: '0 auto'
         }}>
           {donations.map((item, index) => (
-            <div 
-              key={index} 
-              className="animate-fade-up"
+            <ScrollReveal key={index} direction="up" alwaysAnimate={true} delay={`${index * 0.1}s`}>
+            <div
               style={{
                 backgroundColor: '#fff',
                 borderRadius: 'var(--radius-lg)',
@@ -93,8 +93,7 @@ const Donation = () => {
                 flexDirection: 'column',
                 alignItems: 'center',
                 textAlign: 'center',
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                animationDelay: `${index * 0.1}s`
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-10px)';
@@ -138,6 +137,7 @@ const Donation = () => {
                 {language === 'ta' ? item.descTa : item.descEn}
               </p>
             </div>
+            </ScrollReveal>
           ))}
         </div>
 
